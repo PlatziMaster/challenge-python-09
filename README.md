@@ -1,6 +1,6 @@
 # Duplicando 0s
 
-Dada una lista de enteros `l`, duplica cada 0 que encuentres moviendo
+Dada una lista de enteros `arr`, duplica cada 0 que encuentres moviendo
 todos los elementos a la derecha un lugar.
 
 Observa que los elementos que terminen en una posición fuera del tamaño
@@ -35,7 +35,7 @@ from typing import List
 
 class Solution:
 
-    def duplicate_zeros(self, l: List[int]):
+    def duplicate_zeros(self, arr: List[int]):
         # AQUÍ VA TU SOLUCIÓN
 ```
 
