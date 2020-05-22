@@ -19,7 +19,7 @@ class Grader(BaseGrader):
         return results_differ
 
     def get_test_cases(self):
-        """Return the first 300 fibonacci numbers."""
+        """Load and return the test cases."""
         base = [
             ([1], [1]),
             ([0], [0]),
