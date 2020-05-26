@@ -1,7 +1,7 @@
 """Problem grader."""
 
+import copy
 from base import BaseGrader # pylint: disable=E0611
-
 
 class Grader(BaseGrader):
     """Problem grader."""
@@ -11,11 +11,12 @@ class Grader(BaseGrader):
 #
     def eval_solution(self, test_case) -> bool:
         """Evaluates solution against the given test case."""
-        input_data, want = test_case
-        self.f(input_data)
-        results_differ = input_data != want
+        transit_arr, want = test_case
+        input_data = copy.copy(transit_arr)
+        self.f(transit_arr)
+        results_differ = transit_arr != want
         if results_differ:
-            self.log_execution_results(input_data, test_case, failed=True)
+            self.log_execution_results(transit_arr, (input_data, want), failed=True)
         return results_differ
 
     def get_test_cases(self):

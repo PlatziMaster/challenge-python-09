@@ -10,8 +10,8 @@ class Solution:
         count_zeros = 0
         array_len = len(arr)
         secure_zone_to_write = -1
-        for i, v in enumerate(arr):
-            if v == 0:
+        for i, value in enumerate(arr):
+            if value == 0:
                 secure_zone_to_write = i if secure_zone_to_write == -1 else secure_zone_to_write
                 if i + count_zeros + 1 < array_len:
                     count_zeros += 1
