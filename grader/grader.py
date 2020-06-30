@@ -41,3 +41,4 @@ class Grader(BaseGrader):
                 output = [int(x) for x in output.split(",")]
                 base.append((input_data, output))
         return base
+        
